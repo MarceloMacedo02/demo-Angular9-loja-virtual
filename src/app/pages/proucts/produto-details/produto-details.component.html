@@ -1,0 +1,135 @@
+<nav aria-label="breadcrumb" class="breadcrumb-nav">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"> Detalhes </li>
+        </ol>
+    </div>
+</nav>
+<div class="container">
+    <div class="container-box">
+        <div class="product-single-container product-single-default">
+            <div class="row">
+                <div class="col-md-5  ">
+                    <div class=" ">
+
+                        <span class="prod-full-screen ">
+                                <i class="icon-plus "></i>
+                            </span>
+                    </div>
+                    <div class="prod-thumbnail  ">
+                        <div class=" ">
+                            <img [src]="product.imageView " />
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End .product-single-gallery -->
+
+                <div class="col-md-7 product-single-details ">
+                    <h1 class="product-title ">{{product.name}} </h1>
+
+                    <div class="ratings-container ">
+                        <div class="product-ratings ">
+                            <span class="ratings " style="width:60% "></span>
+                            <!-- End .ratings -->
+                        </div>
+                        <!-- End .product-ratings
+
+                        <a href="# " class="rating-link ">( 6 Reviews )</a>-->
+                    </div>
+                    <!-- End .ratings-container -->
+
+                    <hr class="short-divider ">
+
+                    <div class="price-box ">
+                        <span class="product-price ">{{product.value|currency:'BRL'}} </span>
+                    </div>
+                    <!-- End .price-box -->
+
+                    <div class="product-desc ">
+                        <p>
+                            {{product.description}}
+                        </p>
+                    </div>
+                    <!-- End .product-desc -->
+
+
+                    <!-- End .product-filters-container -->
+
+                    <hr class="divider ">
+
+                    <div class="product-action ">
+                        <div class="product-single-qty " style='margin-top:17px'>
+                            <input class="horizontal-quantity form-control " type="number " [(ngModel)]="qtd">
+                        </div>
+                        <!-- End .product-single-qty -->
+
+                        <button (click)="addItemInCar()" class="btn btn-dark add-cart icon-shopping-cart " title="Add to Cart ">Adicionar ao Carrinho</button>
+                    </div>
+                    <!-- End .product-action -->
+
+                    <hr class="divider mb-1 ">
+
+
+                </div>
+                <!-- End .product-single-details -->
+            </div>
+            <!-- End .row -->
+        </div>
+        <!-- End .product-single-container -->
+
+        <div class="product-single-tabs ">
+            <ul class="nav nav-tabs " role="tablist ">
+                <li class="nav-item ">
+                    <a class="nav-link active " id="product-tab-desc " data-toggle="tab " href="#product-desc-content " role="tab " aria-controls="product-desc-content " aria-selected="true ">Descrição</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " id="product-tab-more-info " data-toggle="tab " href="#product-more-info-content " role="tab " aria-controls="product-more-info-content " aria-selected="false ">Mais Informações</a>
+                </li>
+
+            </ul>
+            <div class="tab-content ">
+                <div class="tab-pane fade show active " id="product-desc-content " role="tabpanel " aria-labelledby="product-tab-desc ">
+                    <div class="product-desc-content ">
+                        <p> {{product.description}} </p>
+                    </div>
+                    <!-- End .product-desc-content -->
+                </div>
+                <!-- End .tab-pane -->
+
+                <div class="tab-pane fade fade " id="product-more-info-content " role="tabpanel " aria-labelledby="product-tab-more-info ">
+                    <div class="product-desc-content ">
+                        <p> {{product.description}} </p>
+                    </div>
+                    <!-- End .product-desc-content -->
+                </div>
+                <!-- End .tab-pane -->
+
+                <div class="tab-pane fade " id="product-tags-content " role="tabpanel " aria-labelledby="product-tab-tags ">
+                    <div class="product-tags-content ">
+                        <form action="# ">
+                            <h4>Add Your Tags:</h4>
+                            <div class="form-group ">
+                                <input type="text " class="form-control form-control-sm " required>
+                                <input type="submit " class="btn btn-dark " value="Add Tags ">
+                            </div>
+                            <!-- End .form-group -->
+                        </form>
+                        <p class="note ">Use spaces to separate tags. Use single quotes (') for phrases.</p>
+                    </div>
+                    <!-- End .product-tags-content -->
+                </div>
+                <!-- End .tab-pane -->
+
+
+                <!-- End .tab-pane -->
+            </div>
+            <!-- End .tab-content -->
+        </div>
+        <!-- End .product-single-tabs -->
+
+
+    </div>
+</div>
+<!-- End .container -->

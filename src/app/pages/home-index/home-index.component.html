@@ -1,0 +1,146 @@
+<main class="main">
+    <div class="home-top-container mt-lg-2">
+        <div class="container">
+            <div class="container">
+
+                <ngx-skeleton-loader *ngIf="isLoading" count="10" animation="progress-dark" [theme]="{
+
+                'background-color': 'blackgray'
+              }"></ngx-skeleton-loader>
+
+                <div class="row" *ngIf="!isLoading">
+                    <div class="col-lg-9">
+                        <div class="home-product-tabs">
+                            <ul class="nav nav-tabs mb-2" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="featured-products-tab" data-toggle="tab" href="#featured-products" role="tab" aria-controls="featured-products" aria-selected="true">Featured Products</a>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="featured-products" role="tabpanel" aria-labelledby="featured-products-tab">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-4" *ngFor="let item of pruducts">
+                                            <app-product-card [product]='item'></app-product-card>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End .tab-pane -->
+                            </div>
+                            <!-- End .tab-content -->
+                        </div>
+                        <!-- End .home-product-tabs -->
+
+
+                    </div>
+                    <!-- End .col-lg-9 -->
+
+                    <div class="sidebar-overlay"></div>
+                    <div class="sidebar-toggle"><i class="fas fa-sliders-h"></i></div>
+                    <aside class="sidebar-home col-lg-3 mobile-sidebar">
+                        <div class="side-menu-wrapper mb-3">
+                            <h2 class="side-menu-title ls-n-25">Browse Categories</h2>
+
+                            <ul class="side-menu pt-2 mb-2 px-3 mx-3">
+                                <li>
+                                    <a href="category.html">Fashion</a>
+                                    <span class="side-menu-toggle"></span>
+
+                                    <ul>
+                                        <li><a href="#">Women Clothes</a></li>
+                                        <li><a href="#">Men Clothes</a></li>
+                                        <li><a href="#">Shoes</a></li>
+                                        <li><a href="#">Accessories</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="category.html">Electronics </a>
+                                    <span class="side-menu-toggle"></span>
+
+                                    <ul>
+                                        <li><a href="#">Computers</a></li>
+                                        <li><a href="#">Mobile Phones</a></li>
+                                        <li><a href="#">Laptops</a></li>
+                                        <li><a href="#">Tablets</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="category.html">Gifts</a>
+                                </li>
+                                <li>
+                                    <a href="category.html">Home & Garden</a>
+                                </li>
+                                <li>
+                                    <a href="category.html">Music</a>
+                                </li>
+                                <li>
+                                    <a href="category.html">Motors</a>
+                                    <span class="side-menu-toggle"></span>
+
+                                    <ul>
+                                        <li><a href="#">Sub Category</a></li>
+                                        <li><a href="#">Sub Category</a></li>
+                                        <li><a href="#">Sub Category</a></li>
+                                        <li><a href="#">Sub Category</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="category.html">Clothes</a>
+                                    <span class="side-menu-toggle"></span>
+
+                                    <ul>
+                                        <li><a href="#">Sub Category</a></li>
+                                        <li><a href="#">Sub Category</a></li>
+                                        <li><a href="#">Sub Category</a></li>
+                                        <li><a href="#">Sub Category</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- End .side-menu -->
+                        </div>
+
+                        <div class="widget widget-banners px-5 pb-3 text-center">
+                            <div class="owl-carousel owl-theme dots-small">
+                                <div class="banner d-flex flex-column align-items-center">
+                                    <h3 class="badge-sale bg-secondary d-flex flex-column align-items-center justify-content-center text-uppercase">
+                                        <em class="pt-3 ls-0">Sale</em>Many Item
+                                    </h3>
+                                    <h4 class="sale-text font1 text-uppercase m-b-3">45<sup>%</sup><sub>off</sub></h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <a href="#" class="btn btn-primary btn-md font1">View Sale</a>
+                                </div>
+                                <!-- End .banner -->
+
+                                <div class="banner d-flex flex-column align-items-center">
+                                    <h3 class="badge-sale bg-secondary d-flex flex-column align-items-center justify-content-center text-uppercase">
+                                        <em class="pt-3 ls-0">Sale</em>Many Item
+                                    </h3>
+                                    <h4 class="sale-text font1 text-uppercase m-b-3">45<sup>%</sup><sub>off</sub></h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <a href="#" class="btn btn-primary btn-md font1">View Sale</a>
+                                </div>
+                                <!-- End .banner -->
+
+                                <div class="banner d-flex flex-column align-items-center">
+                                    <h3 class="badge-sale bg-secondary d-flex flex-column align-items-center justify-content-center text-uppercase">
+                                        <em class="pt-3 ls-0">Sale</em>Many Item
+                                    </h3>
+                                    <h4 class="sale-text font1 text-uppercase m-b-3">45<sup>%</sup><sub>off</sub></h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <a href="#" class="btn btn-primary btn-md font1">View Sale</a>
+                                </div>
+                                <!-- End .banner -->
+                            </div>
+                            <!-- End .banner-slider -->
+                        </div>
+                        <!-- End .widget -->
+
+                        <!-- End .widget -->
+                    </aside>
+                </div>
+                <!-- End .row -->
+            </div>
+            <!-- End .container -->
+        </div>
+    </div>
+</main>
