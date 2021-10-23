@@ -30,6 +30,7 @@ export class HearderComponent implements OnInit {
   }
   remove(index: any): void {
     this.sutotal-=this.smallCar[index].value * this.smallCar[index].qtd;
+
     this.smallCar.splice(index, 1);
     this.storage.setSmallCar(this.smallCar);
 

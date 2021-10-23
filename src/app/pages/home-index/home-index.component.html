@@ -42,59 +42,11 @@
                             <h2 class="side-menu-title ls-n-25">Browse Categories</h2>
 
                             <ul class="side-menu pt-2 mb-2 px-3 mx-3">
-                                <li>
-                                    <a href="category.html">Fashion</a>
-                                    <span class="side-menu-toggle"></span>
 
-                                    <ul>
-                                        <li><a href="#">Women Clothes</a></li>
-                                        <li><a href="#">Men Clothes</a></li>
-                                        <li><a href="#">Shoes</a></li>
-                                        <li><a href="#">Accessories</a></li>
-                                    </ul>
+                                <li *ngFor="let item of catgorys">
+                                    <a>{{item.name}} </a>
                                 </li>
-                                <li>
-                                    <a href="category.html">Electronics </a>
-                                    <span class="side-menu-toggle"></span>
 
-                                    <ul>
-                                        <li><a href="#">Computers</a></li>
-                                        <li><a href="#">Mobile Phones</a></li>
-                                        <li><a href="#">Laptops</a></li>
-                                        <li><a href="#">Tablets</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="category.html">Gifts</a>
-                                </li>
-                                <li>
-                                    <a href="category.html">Home & Garden</a>
-                                </li>
-                                <li>
-                                    <a href="category.html">Music</a>
-                                </li>
-                                <li>
-                                    <a href="category.html">Motors</a>
-                                    <span class="side-menu-toggle"></span>
-
-                                    <ul>
-                                        <li><a href="#">Sub Category</a></li>
-                                        <li><a href="#">Sub Category</a></li>
-                                        <li><a href="#">Sub Category</a></li>
-                                        <li><a href="#">Sub Category</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="category.html">Clothes</a>
-                                    <span class="side-menu-toggle"></span>
-
-                                    <ul>
-                                        <li><a href="#">Sub Category</a></li>
-                                        <li><a href="#">Sub Category</a></li>
-                                        <li><a href="#">Sub Category</a></li>
-                                        <li><a href="#">Sub Category</a></li>
-                                    </ul>
-                                </li>
                             </ul>
                             <!-- End .side-menu -->
                         </div>

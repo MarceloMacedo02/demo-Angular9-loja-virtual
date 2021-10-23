@@ -14,6 +14,8 @@ export class HomeIndexComponent implements OnInit {
   pruducts: Pruduct[];
   time: any;
   isLoading: boolean = true;
+  timec: any;
+  isLoadingc: boolean = true;
   catgorys: Category[];
   constructor(
     private hhtp: HttpClient,) { }
@@ -24,18 +26,35 @@ export class HomeIndexComponent implements OnInit {
    */
   ngOnInit(): void {
 
-    let headers = new HttpHeaders({'Content-Type': 'application/json', 'Accept': 'application/json', 'Access-Control-Allow-Origin' : '*'});
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Accept': 'application/json', 'Access-Control-Allow-Origin': '*' });
     let i = 0;
     this.time = setInterval(async () => {
-      console.log(i++);
+
       try {
         this.hhtp.get<Pruduct[]>(`${API_CONFIG.baseUrl}/products/all`)
           .subscribe((rest) => {
             this.pruducts = rest;
             this.isLoading = false;
-             if (this.time) {
-            clearInterval(this.time);
-          }
+            if (this.time) {
+              clearInterval(this.time);
+            }
+          })
+      } catch (error) {
+        console.log(error);
+
+      }
+    }, 500);
+
+    this.timec = setInterval(async () => {
+
+      try {
+        this.hhtp.get<Category[]>(`${API_CONFIG.baseUrl}/categorys/all`)
+          .subscribe((rest) => {
+            this.catgorys = rest;
+            this.isLoadingc = false;
+            if (this.timec) {
+              clearInterval(this.timec);
+            }
           })
       } catch (error) {
         console.log(error);
@@ -47,6 +66,9 @@ export class HomeIndexComponent implements OnInit {
   ngOnDestroy(): void {
 
     if (this.time) {
+      clearInterval(this.time);
+    }
+    if (this.timec) {
       clearInterval(this.time);
     }
   }
